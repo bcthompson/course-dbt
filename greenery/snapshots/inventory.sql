@@ -12,4 +12,4 @@
 
 SELECT * FROM {{ source('mysql', 'inventory')}}
 
-{% endsnapshot % }
+{% endsnapshot %}
