@@ -1,0 +1,17 @@
+version: 2
+
+models: 
+  - name: stg_postgres_addresses
+    description: contains addresses for orders submitted 
+  - name: stg_postgres_events
+    description: contains information about actions taken by customers on the website
+  - name: stg_postgres_order_items
+    description: contains quanities included by product in an order 
+  - name: stg_postgres_orders
+    description: contains details about orders and their current status
+  - name: stg_postgres_products
+    description: contains product price and current inventory
+  - name: stg_postgres_promos
+    description: contains information about current and past promotions
+  - name: stg_postgres_users
+    description: contains information about current users 
