@@ -1,0 +1,48 @@
+version: 2
+
+models: 
+  - name: fact_page_views
+    +materialized: view
+    description: includes page view statistics by day, page, etc.
+    columns:
+      - name: event_date
+        tests: 
+          - not_null 
+      - name: page_url
+        tests: 
+          - not_null 
+      - name: unique_events
+        tests: 
+          - not_null 
+          - dbt_utils.expression_is_true
+      - name: count_add_cart
+        tests: 
+          - not_null 
+          - not_negative
+      - name: count_checkout
+        tests: 
+          - not_null 
+          - not_negative
+      - name: count_package_shipped
+        tests: 
+          - not_null 
+          - not_negative
+      - name: count_page_view
+        tests: 
+          - not_null 
+          - not_negative
+      - name: unique_orders
+        tests: 
+          - not_null 
+          - not_negative
+      - name: unique_sessions
+        tests: 
+          - not_null 
+          - not_negative
+      - name: unique_users
+        tests: 
+          - not_null 
+          - not_negative
+      - name: total_price
+        tests: 
+          - not_negative
